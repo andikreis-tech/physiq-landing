@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHYSIQ — Sieh, was sich wirklich verändert hat</title>
+<meta name="description" content="PHYSIQ macht Körperveränderung sichtbar — mit Studio-Fotos, KI-Körperanalyse und Gesundheitswerten statt nur einer Zahl auf der Waage.">
+<meta name="theme-color" content="#24221F">
+<meta property="og:title" content="PHYSIQ — Sieh, was sich wirklich verändert hat">
+<meta property="og:description" content="Studio-Fotos, KI-Körperanalyse und Gesundheitswerte statt nur einer Zahl auf der Waage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://physiq.studio">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"PHYSIQ","operatingSystem":"iOS, Android","applicationCategory":"HealthApplication","description":"PHYSIQ macht Körperveränderung sichtbar.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--bg:#24221F;--bg-card:#2E2C28;--text:#F0EDE6;--text-muted:#A09A8F;--text-dark:#24221F;--teal:#3CC0B8;--teal-dim:rgba(60,192,184,0.12);--coral:#E8845C;--coral-hover:#D4724A;--coral-dim:rgba(232,132,92,0.10);--jade:#52B07E;--font:'DM Sans',system-ui,-apple-system,sans-serif;--max-w:1120px;--section-py:clamp(4rem,8vw,7rem);--radius:16px;--radius-sm:10px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}a{color:var(--teal);text-decoration:none;transition:opacity .2s}a:hover{opacity:.85}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem)}
+section{padding:var(--section-py) 0}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(36,34,31,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-size:20px;font-weight:700;letter-spacing:1px;color:var(--text);text-decoration:none}.nav-logo span{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:2rem}.nav-links a{color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--text);opacity:1}
+.nav-cta{background:var(--coral);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}.nav-cta:hover{background:var(--coral-hover);opacity:1;transform:translateY(-1px)}
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+.btn-coral{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;border:none;border-radius:var(--radius-sm);padding:16px 32px;font-size:17px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}.btn-coral:hover{background:var(--coral-hover);opacity:1;transform:translateY(-2px)}.btn-coral:active{transform:translateY(0)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);border:1.5px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);padding:15px 31px;font-size:17px;font-weight:600;font-family:var(--font);cursor:pointer;transition:border-color .2s,transform .15s;text-decoration:none}.btn-outline:hover{border-color:var(--teal);opacity:1;transform:translateY(-2px)}
+.hero{padding-top:calc(64px + var(--section-py));min-height:100vh;min-height:100svh;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero-badge{display:inline-block;padding:6px 14px;border-radius:50px;background:var(--teal-dim);color:var(--teal);font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:1.25rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;line-height:1.15;letter-spacing:-.5px;margin-bottom:1rem}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text-muted);margin-bottom:2rem;max-width:440px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:1.5rem}
+.hero-micro{font-size:13px;color:var(--text-muted)}
+.hero-compare{position:relative;border-radius:var(--radius);overflow:hidden;cursor:col-resize;user-select:none;-webkit-user-select:none;max-width:420px}
+.hero-compare .hero-compare-before{width:100%;display:block}
+.hero-compare .hero-compare-after{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 0 0 50%);z-index:2}
+.hero-compare-line{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--teal);z-index:5;pointer-events:none}
+.hero-compare-handle{position:absolute;top:50%;left:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:var(--teal);z-index:6;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero-compare-handle svg{width:20px;height:20px;fill:#fff}
+.hero-label{position:absolute;bottom:16px;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;z-index:4}
+.label-before{left:16px;background:rgba(36,34,31,.85);color:var(--text-muted)}.label-after{right:16px;background:var(--teal);color:var(--text-dark)}
+.hero-slide-hint{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--text-muted);z-index:7;opacity:.7;pointer-events:none;animation:hintFade 3s ease 2s forwards}
+@keyframes hintFade{to{opacity:0}}
+@media(max-width:768px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-sub{margin-left:auto;margin-right:auto}.hero-buttons{justify-content:center}.hero-micro{text-align:center}.hero-compare{max-width:360px;margin:0 auto}}
+.section-headline{font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:700;line-height:1.25;text-align:center;margin-bottom:.75rem;letter-spacing:-.3px}
+.pain-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.pain-card{background:var(--bg-card);border-radius:var(--radius);padding:2rem 1.5rem;border:1px solid rgba(255,255,255,.04);transition:border-color .25s,transform .25s}
+.pain-card:hover{border-color:rgba(255,255,255,.1);transform:translateY(-3px)}
+.pain-icon{width:48px;height:48px;border-radius:12px;background:var(--coral-dim);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.pain-card p{color:var(--text-muted);font-size:15px;line-height:1.6}
+@media(max-width:768px){.pain-cards{grid-template-columns:1fr}}
+.bridge{padding:clamp(2rem,5vw,3.5rem) 0}.bridge p{text-align:center;font-size:clamp(1.15rem,2.5vw,1.5rem);font-weight:500;color:var(--teal);max-width:600px;margin:0 auto}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}.feature-grid.reverse .feature-text{order:2}.feature-grid.reverse .feature-visual{order:1}
+.feature-pill{display:inline-block;padding:5px 12px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:.5px;margin-bottom:1rem}.pill-teal{background:var(--teal-dim);color:var(--teal)}
+.feature-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:1rem;letter-spacing:-.3px}
+.feature-text p{color:var(--text-muted);font-size:1rem;line-height:1.7;margin-bottom:1rem}
+.feature-note{font-size:14px;color:var(--text-muted);font-style:italic;margin-bottom:1.5rem}.feature-note svg{vertical-align:middle;margin-right:4px}
+.feature-cta{margin-top:.5rem}.feature-glp1{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem}
+@media(max-width:768px){.feature-grid{grid-template-columns:1fr}.feature-grid.reverse .feature-text{order:1}.feature-grid.reverse .feature-visual{order:2}}
+.phone{max-width:280px;margin:0 auto;background:var(--bg-card);border-radius:32px;padding:10px;border:2.5px solid rgba(255,255,255,.08);box-shadow:0 24px 64px rgba(0,0,0,.35)}
+.phone-screen{border-radius:22px;overflow:hidden;background:#1a1917}
+.phone-screen img{width:100%;display:block}
+.phone-notch{width:72px;height:5px;background:rgba(255,255,255,.07);border-radius:3px;margin:6px auto 2px}
+.trust{background:linear-gradient(180deg,var(--bg) 0%,rgba(60,192,184,.03) 100%)}
+.trust-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.trust-card{background:var(--bg-card);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;border:1px solid rgba(255,255,255,.04)}
+.trust-icon{width:56px;height:56px;border-radius:14px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.trust-card h3{font-size:16px;font-weight:600;margin-bottom:.5rem}.trust-card p{color:var(--text-muted);font-size:14px;line-height:1.6}
+@media(max-width:768px){.trust-cards{grid-template-columns:1fr}}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:720px;margin:0 auto 2rem}
+.price-card{background:var(--bg-card);border-radius:var(--radius);padding:2.5rem 2rem;border:1px solid rgba(255,255,255,.06);position:relative}.price-card.featured{border-color:var(--coral)}
+.price-badge{position:absolute;top:-12px;right:20px;background:var(--coral);color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:50px}
+.price-name{font-size:14px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem}
+.price-amount{font-size:clamp(2rem,4vw,2.5rem);font-weight:700;margin-bottom:.25rem}.price-amount span{font-size:16px;font-weight:400;color:var(--text-muted)}
+.price-period{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem}
+.price-features{list-style:none;margin-bottom:2rem}.price-features li{padding:8px 0;font-size:15px;color:var(--text-muted);border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:10px}.price-features li::before{content:'✓';color:var(--jade);font-weight:700;font-size:14px}
+.price-card .btn-coral,.price-card .btn-outline{width:100%;justify-content:center}
+.price-yearly{text-align:center;font-size:15px;color:var(--text-muted);margin-bottom:2.5rem;max-width:720px;margin-left:auto;margin-right:auto}
+.price-anchor{background:var(--bg-card);border-radius:var(--radius);padding:1.5rem 2rem;text-align:center;max-width:720px;margin:0 auto 2rem;border:1px solid rgba(255,255,255,.06)}.price-anchor p{font-size:15px;color:var(--text-muted)}.price-anchor strong{color:var(--text)}
+@media(max-width:640px){.pricing-grid{grid-template-columns:1fr}}
+.founder-grid{display:grid;grid-template-columns:1fr auto;gap:clamp(2rem,5vw,4rem);align-items:center;max-width:800px;margin:0 auto}
+.founder-text h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1.25rem;line-height:1.25}
+.founder-text p{color:var(--text-muted);font-size:1rem;line-height:1.75}
+.founder-photo{width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid var(--bg-card);flex-shrink:0}.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+@media(max-width:640px){.founder-grid{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto;order:-1}}
+.faq-list{max-width:680px;margin:0 auto}.faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-q{width:100%;background:none;border:none;color:var(--text);font-family:var(--font);font-size:16px;font-weight:500;text-align:left;padding:1.25rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}.faq-q:hover{color:var(--teal)}
+.faq-q svg{flex-shrink:0;transition:transform .3s}.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}.faq-item.open .faq-a{max-height:300px;padding-bottom:1.25rem}.faq-a p{color:var(--text-muted);font-size:15px;line-height:1.7}
+.final-cta{text-align:center;background:linear-gradient(135deg,rgba(232,132,92,.08) 0%,rgba(60,192,184,.06) 100%);border-radius:var(--radius);padding:clamp(3rem,6vw,5rem) clamp(1.5rem,4vw,3rem);max-width:var(--max-w);margin:0 auto}
+.final-cta h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;margin-bottom:1.5rem;letter-spacing:-.3px}.final-cta .hero-micro{margin-top:1rem}
+.waitlist-form{display:flex;gap:8px;max-width:420px;margin:0 auto}
+.waitlist-input{flex:1;padding:14px 18px;border:1.5px solid rgba(255,255,255,.15);border-radius:var(--radius-sm);background:var(--bg-card);color:var(--text);font-size:15px;font-family:var(--font);outline:none;transition:border-color .2s}.waitlist-input:focus{border-color:var(--teal)}.waitlist-input::placeholder{color:var(--text-muted)}
+.waitlist-btn{padding:14px 28px;background:var(--coral);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s;white-space:nowrap}.waitlist-btn:hover{background:var(--coral-hover)}
+.waitlist-success{display:none;color:var(--jade);font-size:15px;font-weight:500;margin-top:1rem}
+@media(max-width:480px){.waitlist-form{flex-direction:column}}
+.footer{padding:3rem 0;border-top:1px solid rgba(255,255,255,.06);margin-top:var(--section-py)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-size:18px;font-weight:700;letter-spacing:1px;color:var(--text)}.footer-logo span{color:var(--teal)}
+.footer-links{display:flex;gap:1.5rem}.footer-links a{color:var(--text-muted);font-size:13px;text-decoration:none}.footer-links a:hover{color:var(--text)}
+.footer-copy{color:var(--text-muted);font-size:13px;width:100%;text-align:center;margin-top:1.5rem}
+@media(prefers-reduced-motion:no-preference){.fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.fade-up.visible{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Hauptnavigation"><div class="nav-inner"><a href="#" class="nav-logo" aria-label="PHYSIQ Home">PHYSI<span>Q</span></a><div class="nav-links"><a href="#features">Features</a><a href="#preise">Preise</a><a href="#ueber">Über</a><a href="#notify" class="nav-cta">Auf die Warteliste</a></div></div></nav>
+
+<!-- HERO with Before/After Slider -->
+<section class="hero" id="home"><div class="wrap"><div class="hero-grid">
+<div class="hero-text fade-up">
+  <div class="hero-badge">Bald verfügbar für iOS &amp; Android</div>
+  <h1>Sieh, was sich wirklich verändert&nbsp;hat.</h1>
+  <p class="hero-sub">Statt nur einer Zahl auf der Waage.</p>
+  <div class="hero-buttons"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+  <p class="hero-micro">Keine Pflicht-Fotos. Kostenloser Start.</p>
+</div>
+<div class="fade-up" style="transition-delay:.15s">
+  <div class="hero-compare" id="heroCompare">
+    <img src="hero-before.webp" alt="Vorher — normales Selfie" class="hero-compare-before" loading="eager">
+    <img src="hero-after.webp" alt="Nachher — PHYSIQ Studio-Effekt" class="hero-compare-after" id="afterImg" loading="eager">
+    <div class="hero-compare-line" id="compareLine"></div>
+    <div class="hero-compare-handle" id="compareHandle"><svg viewBox="0 0 24 24"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+    <span class="label-before hero-label">Vorher</span>
+    <span class="label-after hero-label">PHYSIQ</span>
+    <span class="hero-slide-hint">&#8592; schieben &#8594;</span>
+  </div>
+</div>
+</div></div></section>
+
+<!-- PAIN POINTS -->
+<section id="problem"><div class="wrap">
+  <h2 class="section-headline fade-up">Die Waage zeigt eine Zahl.<br>Dein Körper erzählt eine andere Geschichte.</h2>
+  <div class="pain-cards">
+    <div class="pain-card fade-up"><div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:var(--coral)"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/></svg></div><p>Du hast abgenommen — aber im Spiegel siehst du kaum Unterschied.</p></div>
+    <div class="pain-card fade-up" style="transition-delay:.1s"><div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:var(--coral)"><path d="M12 18v-3m0-3V6m0 0L8 10m4-4 4 4"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg></div><p>Deine App trackt Gewicht. Nicht was sich darunter verändert.</p></div>
+    <div class="pain-card fade-up" style="transition-delay:.2s"><div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:var(--coral)"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><p>Fotos machst du — aber wirklich vergleichen kannst du nicht.</p></div>
+  </div>
+</div></section>
+
+<section class="bridge"><div class="wrap"><p class="fade-up">PHYSIQ macht sichtbar, was sich wirklich verändert.</p></div></section>
+
+<!-- STUDIO MODE with Dashboard phone mockup -->
+<section id="features"><div class="wrap"><div class="feature-grid">
+  <div class="feature-text fade-up">
+    <span class="feature-pill pill-teal">Studio Mode</span>
+    <h2>Dein Fotostudio zu&nbsp;Hause.</h2>
+    <p>Verwandle deine Smartphone-Fotos in professionelle Fortschrittsbilder. Gleiche Pose, gleicher Look — jedes Mal. So siehst du Veränderungen, die im Alltags-Selfie untergehen.</p>
+    <p class="feature-note"><svg width="16" height="16" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Fotos sind optional — PHYSIQ funktioniert auch ohne.</p>
+    <p class="feature-glp1">Besonders wertvoll für alle, die unter Medikation oder nach einem Programm ihren Körper im Blick behalten wollen.</p>
+    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+  </div>
+  <div class="fade-up" style="transition-delay:.15s">
+    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-hero.webp" alt="PHYSIQ Dashboard — Messwerte, Streak und Bestleistung" loading="lazy"></div></div>
+  </div>
+</div></div></section>
+
+<!-- KI-ANALYSE -->
+<section><div class="wrap"><div class="feature-grid reverse">
+  <div class="feature-text fade-up">
+    <span class="feature-pill pill-teal">KI-Analyse</span>
+    <h2>Dein persönlicher Analyst.</h2>
+    <p>PHYSIQ analysiert deine Daten, erkennt Trends und gibt dir persönliche Einschätzungen — verständlich, motivierend und auf dich zugeschnitten. Kein Fachchinesisch. Keine generischen Tipps.</p>
+    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+  </div>
+  <div class="fade-up" style="transition-delay:.15s">
+    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-ki.webp" alt="PHYSIQ KI-Analyse — persönliche Körperanalyse" loading="lazy"></div></div>
+  </div>
+</div></div></section>
+
+<!-- HEALTH SCORE -->
+<section><div class="wrap"><div class="feature-grid">
+  <div class="feature-text fade-up">
+    <span class="feature-pill pill-teal">Health Score</span>
+    <h2>Mehr als nur Gewicht.</h2>
+    <p>Wie gesund dein Gewicht wirklich ist, sagt dir keine Waage. PHYSIQ berechnet aus deinen Maßen einen persönlichen Gesundheitswert — und zeigt dir, wie er sich über die Zeit entwickelt.</p>
+    <p class="feature-glp1">Ideal, um Veränderungen der Körperzusammensetzung sichtbar zu machen — nicht nur Kilogramm.</p>
+    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+  </div>
+  <div class="fade-up" style="transition-delay:.15s">
+    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-health.webp" alt="PHYSIQ Health Score — Verlaufschart und WHtR" loading="lazy"></div></div>
+  </div>
+</div></div></section>
+
+<!-- DATENSCHUTZ -->
+<section class="trust"><div class="wrap">
+  <h2 class="section-headline fade-up">Deine Daten gehören dir.</h2><div style="height:1.5rem"></div>
+  <div class="trust-cards">
+    <div class="trust-card fade-up"><div class="trust-icon"><svg width="28" height="28" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 1.5-1 1 2.5L14 9"/><path d="M2 12h2m16 0h2M12 2v2m0 16v2"/></svg></div><h3>Server in Frankfurt — DSGVO-konform</h3><p>Deine Daten bleiben in der EU. Keine Umwege über US-Server.</p></div>
+    <div class="trust-card fade-up" style="transition-delay:.1s"><div class="trust-icon"><svg width="28" height="28" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg></div><h3>Fotos bleiben auf deinem Gerät</h3><p>Kein Cloud-Upload ohne deine Zustimmung. Kein Zugriff durch Dritte.</p></div>
+    <div class="trust-card fade-up" style="transition-delay:.2s"><div class="trust-icon"><svg width="28" height="28" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6m0-6 6 6"/></svg></div><h3>Keine Werbung. Kein Datenverkauf. Nie.</h3><p>PHYSIQ verdient Geld durch Pro-Features — nicht durch deine Daten.</p></div>
+  </div>
+</div></section>
+
+<!-- PRICING -->
+<section id="preise"><div class="wrap">
+  <h2 class="section-headline fade-up">Starte kostenlos.<br>Upgrade wenn du bereit bist.</h2><div style="height:1.5rem"></div>
+  <div class="price-anchor fade-up"><p>Personal Trainer: <strong>~80€/Monat.</strong> Bodyscan-Studio: <strong>~30€ pro Sitzung.</strong> PHYSIQ Pro: <strong>9,99€.</strong></p></div>
+  <div class="pricing-grid">
+    <div class="price-card fade-up"><div class="price-name">Basis</div><div class="price-amount">Free</div><div class="price-period">Für immer kostenlos</div><ul class="price-features"><li>Unbegrenzte Einträge</li><li>Studio Mode</li><li>Cloud-Sync</li><li>1 KI-Analyse / Monat</li></ul><a href="#notify" class="btn-outline">Kostenlos starten</a></div>
+    <div class="price-card featured fade-up" style="transition-delay:.1s"><span class="price-badge">Beliebt</span><div class="price-name">Pro</div><div class="price-amount">9,99€ <span>/Mo</span></div><div class="price-period">Alles aus Basis, plus:</div><ul class="price-features"><li>Unbegrenzte KI-Analysen</li><li>Detaillierte Trend-Berichte</li><li>Prioritäts-Support</li></ul><a href="#notify" class="btn-coral">Pro ausprobieren</a></div>
+  </div>
+  <p class="price-yearly fade-up">Jahresabo: 95,88€/Jahr (7,99€/Mo) — mit exklusiven Jahres-Features: 12-Monats-Trend-Analyse und persönliche Jahres-Zusammenfassung.</p>
+</div></section>
+
+<!-- GRÜNDER -->
+<section id="ueber"><div class="wrap"><div class="founder-grid fade-up">
+  <div class="founder-text"><h2>Gebaut von jemandem, der es selbst braucht.</h2><p>Ich bin Andi. Kein Fitness-Influencer, kein Startup-Gründer mit Millionenbudget. Ich habe angefangen, meinen Körper zu tracken — und gemerkt: keine App zeigt mir, was sich wirklich verändert. Also habe ich PHYSIQ gebaut. Erst für mich. Jetzt für alle, denen es genauso geht.</p></div>
+  <div class="founder-photo"><img src="founder-photo.webp" alt="Andi, Gründer von PHYSIQ" width="140" height="140" loading="lazy"></div>
+</div></div></section>
+
+<!-- FAQ -->
+<section><div class="wrap">
+  <h2 class="section-headline fade-up">Häufige Fragen</h2><div style="height:1.5rem"></div>
+  <div class="faq-list fade-up">
+    <div class="faq-item"><button class="faq-q">Brauche ich Fotos, um PHYSIQ zu nutzen?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Nein. Fotos sind komplett optional. PHYSIQ trackt auch Messwerte, berechnet deinen Gesundheitswert und gibt dir KI-Analysen — alles ohne ein einziges Foto. Studio Mode ist ein Bonus für alle, die ihren Fortschritt visuell festhalten wollen.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Wie genau ist der Health Score?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Der Health Score basiert auf wissenschaftlich fundierten Maßen wie dem Taille-Größe-Verhältnis — ein Indikator, den Mediziner als aussagekräftiger als BMI bewerten. Er ersetzt keine ärztliche Diagnose, gibt dir aber eine solide Orientierung.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Was passiert mit meinen Daten?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Deine Daten liegen auf Servern in Frankfurt (DSGVO-konform). Fotos bleiben auf deinem Gerät, es sei denn du aktivierst Cloud-Sync. PHYSIQ verkauft keine Daten und zeigt keine Werbung — dein Vertrauen ist unser Geschäftsmodell.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Was passiert wenn ich kündige?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Du behältst den Zugang zu allen Basis-Features und deinen gespeicherten Daten. Nur die Pro-Features (unbegrenzte KI-Analysen, Trend-Berichte) werden deaktiviert. Deine Daten gehören dir — immer.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Kann ich meine Daten exportieren?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Ja. Du kannst deine kompletten Tracking-Daten jederzeit als CSV exportieren. Deine Daten gehören dir — auch wenn du PHYSIQ irgendwann nicht mehr nutzen willst.</p></div></div>
+  </div>
+</div></section>
+
+<!-- FINAL CTA -->
+<section id="notify"><div class="final-cta fade-up">
+  <h2>Bereit, deinen Fortschritt wirklich zu sehen?</h2>
+  <div class="waitlist-form" id="waitlistForm"><input type="email" class="waitlist-input" placeholder="Deine E-Mail-Adresse" id="waitlistEmail" required><button class="waitlist-btn" onclick="submitWaitlist()">Benachrichtige mich</button></div>
+  <div class="waitlist-success" id="waitlistSuccess">Du bist auf der Liste! Wir melden uns, sobald PHYSIQ live ist.</div>
+  <p class="hero-micro">Keine Kreditkarte. Keine Pflicht-Fotos.</p>
+</div></section>
+
+<footer class="footer"><div class="wrap"><div class="footer-inner">
+  <div class="footer-logo">PHYSI<span>Q</span></div>
+  <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">Kontakt</a></div>
+  <p class="footer-copy">&copy; 2026 PHYSIQ</p>
+</div></div></footer>
+
+<script>
+(function(){var els=document.querySelectorAll('.fade-up');if(!window.IntersectionObserver){els.forEach(function(e){e.classList.add('visible')});return}var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
+(function(){var w=document.getElementById('heroCompare');if(!w)return;var l=document.getElementById('compareLine'),h=document.getElementById('compareHandle'),a=document.getElementById('afterImg'),d=false;function s(p){p=Math.max(5,Math.min(95,p));a.style.clipPath='inset(0 0 0 '+p+'%)';l.style.left=p+'%';h.style.left=p+'%'}function g(e){var r=w.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;return(x/r.width)*100}w.addEventListener('mousedown',function(e){d=true;s(g(e));e.preventDefault()});w.addEventListener('touchstart',function(e){d=true;s(g(e))},{passive:true});document.addEventListener('mousemove',function(e){if(d)s(g(e))});document.addEventListener('touchmove',function(e){if(d)s(g(e))},{passive:true});document.addEventListener('mouseup',function(){d=false});document.addEventListener('touchend',function(){d=false})})();
+document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=this.parentElement;var o=i.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')})});
+function submitWaitlist(){var e=document.getElementById('waitlistEmail').value;if(!e||!e.includes('@'))return;document.getElementById('waitlistForm').style.display='none';document.getElementById('waitlistSuccess').style.display='block'}
+</script>
+</body>
+</html>
