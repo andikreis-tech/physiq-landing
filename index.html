@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PHYSIQ — Sieh, was sich wirklich verändert hat</title>
-<meta name="description" content="PHYSIQ macht Körperveränderung sichtbar — mit Studio-Fotos, KI-Körperanalyse und Gesundheitswerten statt nur einer Zahl auf der Waage.">
+<meta name="description" content="PHYSIQ macht Körperzusammensetzung sichtbar — mit Studio-Fotos, KI-Körperanalyse und Gesundheitswerten. Tracke Veränderungen statt nur einer Zahl auf der Waage.">
 <meta name="theme-color" content="#24221F">
 <meta property="og:title" content="PHYSIQ — Sieh, was sich wirklich verändert hat">
 <meta property="og:description" content="Studio-Fotos, KI-Körperanalyse und Gesundheitswerte statt nur einer Zahl auf der Waage.">
@@ -31,6 +31,14 @@ section{padding:var(--section-py) 0}
 .nav-links{display:flex;align-items:center;gap:2rem}.nav-links a{color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--text);opacity:1}
 .nav-cta{background:var(--coral);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}.nav-cta:hover{background:var(--coral-hover);opacity:1;transform:translateY(-1px)}
 @media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+.store-btn{display:inline-flex;align-items:center;gap:10px;border-radius:var(--radius-sm);padding:13px 24px;font-size:16px;font-weight:600;font-family:var(--font);cursor:pointer;transition:transform .15s,opacity .2s;text-decoration:none;border:1.5px solid transparent}
+.store-btn:hover{transform:translateY(-2px);opacity:1}
+.store-btn-apple{background:#fff;color:#000;border-color:#fff}
+.store-btn-apple:hover{background:#f0ede6;border-color:#f0ede6}
+.store-btn-google{background:transparent;color:var(--text);border-color:rgba(255,255,255,0.25)}
+.store-btn-google:hover{border-color:var(--teal)}
+.store-btn-sm{padding:10px 18px;font-size:14px}
+.feature-cta{display:flex;gap:10px;flex-wrap:wrap}
 .btn-coral{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;border:none;border-radius:var(--radius-sm);padding:16px 32px;font-size:17px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}.btn-coral:hover{background:var(--coral-hover);opacity:1;transform:translateY(-2px)}.btn-coral:active{transform:translateY(0)}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);border:1.5px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);padding:15px 31px;font-size:17px;font-weight:600;font-family:var(--font);cursor:pointer;transition:border-color .2s,transform .15s;text-decoration:none}.btn-outline:hover{border-color:var(--teal);opacity:1;transform:translateY(-2px)}
 .hero{padding-top:calc(64px + var(--section-py));min-height:100vh;min-height:100svh;display:flex;align-items:center}
@@ -39,7 +47,9 @@ section{padding:var(--section-py) 0}
 .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;line-height:1.15;letter-spacing:-.5px;margin-bottom:1rem}
 .hero-sub{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text-muted);margin-bottom:2rem;max-width:440px}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:1.5rem}
+.hero-glp1{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem;max-width:440px}
 .hero-micro{font-size:13px;color:var(--text-muted)}
+.hero-trust{font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:.75rem}
 .hero-compare{position:relative;border-radius:var(--radius);overflow:hidden;cursor:col-resize;user-select:none;-webkit-user-select:none;max-width:420px}
 .hero-compare .hero-compare-before{width:100%;display:block}
 .hero-compare .hero-compare-after{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 0 0 50%);z-index:2}
@@ -64,8 +74,10 @@ section{padding:var(--section-py) 0}
 .feature-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:1rem;letter-spacing:-.3px}
 .feature-text p{color:var(--text-muted);font-size:1rem;line-height:1.7;margin-bottom:1rem}
 .feature-note{font-size:14px;color:var(--text-muted);font-style:italic;margin-bottom:1.5rem}.feature-note svg{vertical-align:middle;margin-right:4px}
-.feature-cta{margin-top:.5rem}.feature-glp1{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem}
+.feature-cta{margin-top:.5rem}.feature-glp1{font-size:14px;color:var(--text-muted);margin-bottom:1rem}
+.social-proof-note{font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;opacity:.8}
 @media(max-width:768px){.feature-grid{grid-template-columns:1fr}.feature-grid.reverse .feature-text{order:1}.feature-grid.reverse .feature-visual{order:2}}
+.app-screenshot{max-width:460px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.08)}.app-screenshot img{width:100%;height:auto;display:block}
 .phone{max-width:280px;margin:0 auto;background:var(--bg-card);border-radius:32px;padding:10px;border:2.5px solid rgba(255,255,255,.08);box-shadow:0 24px 64px rgba(0,0,0,.35)}
 .phone-screen{border-radius:22px;overflow:hidden;background:#1a1917}
 .phone-screen img{width:100%;display:block}
@@ -76,6 +88,9 @@ section{padding:var(--section-py) 0}
 .trust-icon{width:56px;height:56px;border-radius:14px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
 .trust-card h3{font-size:16px;font-weight:600;margin-bottom:.5rem}.trust-card p{color:var(--text-muted);font-size:14px;line-height:1.6}
 @media(max-width:768px){.trust-cards{grid-template-columns:1fr}}
+.trust-fact{text-align:center}.trust-fact strong{display:block;font-size:15px;color:var(--teal);margin-bottom:4px}.trust-fact span{font-size:14px;color:var(--text-muted)}
+.trust-bar{padding:1.25rem 0;background:var(--bg);border-bottom:1px solid rgba(255,255,255,.04)}.trust-bar-inner{display:flex;justify-content:center;align-items:center;gap:clamp(1.5rem,4vw,3rem);flex-wrap:wrap}.trust-bar-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text);opacity:.7}.trust-bar-item svg{color:var(--teal);flex-shrink:0}
+.foto-optional-hint{font-size:14px;color:#888;margin-top:.75rem;display:flex;align-items:center;gap:6px}
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:720px;margin:0 auto 2rem}
 .price-card{background:var(--bg-card);border-radius:var(--radius);padding:2.5rem 2rem;border:1px solid rgba(255,255,255,.06);position:relative}.price-card.featured{border-color:var(--coral)}
 .price-badge{position:absolute;top:-12px;right:20px;background:var(--coral);color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:50px}
@@ -83,13 +98,43 @@ section{padding:var(--section-py) 0}
 .price-amount{font-size:clamp(2rem,4vw,2.5rem);font-weight:700;margin-bottom:.25rem}.price-amount span{font-size:16px;font-weight:400;color:var(--text-muted)}
 .price-period{font-size:14px;color:var(--text-muted);margin-bottom:1.5rem}
 .price-features{list-style:none;margin-bottom:2rem}.price-features li{padding:8px 0;font-size:15px;color:var(--text-muted);border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:10px}.price-features li::before{content:'✓';color:var(--jade);font-weight:700;font-size:14px}
+.price-features li.pro-feature{color:var(--text)}.price-features li.included{opacity:.55}
+.price-features-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);padding:10px 0 4px;border-bottom:none}
 .price-card .btn-coral,.price-card .btn-outline{width:100%;justify-content:center}
-.price-yearly{text-align:center;font-size:15px;color:var(--text-muted);margin-bottom:2.5rem;max-width:720px;margin-left:auto;margin-right:auto}
+.price-buttons{display:flex;flex-direction:column;gap:8px;margin-top:auto}.price-buttons .store-btn{width:100%;justify-content:center}
+.price-yearly{text-align:center;font-size:15px;color:var(--text-muted);margin-bottom:2.5rem;max-width:760px;margin-left:auto;margin-right:auto}
+.price-table-wrap{max-width:760px;margin:0 auto 1.5rem;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06)}
+.price-table{width:100%;border-collapse:collapse;min-width:460px}
+.price-table th,.price-table td{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05)}
+.price-table tbody tr:last-child td{border-bottom:none}
+.price-table th{text-align:center;vertical-align:bottom;padding-top:1.5rem;padding-bottom:1rem;background:var(--bg-card)}
+.price-table th:first-child{text-align:left;background:var(--bg-card)}
+.price-table td{font-size:14px;color:var(--text-muted);background:var(--bg-card)}
+.price-table td:first-child{text-align:left;color:var(--text-muted);font-size:14px;width:52%}
+.price-table td:nth-child(2){text-align:center;width:24%}
+.price-table td:nth-child(3){text-align:center;width:24%;background:rgba(60,192,184,.05)}
+.price-table th:nth-child(3){background:rgba(60,192,184,.08);border-top:2px solid var(--teal)}
+.price-th-badge{display:inline-block;background:var(--coral);color:#fff;font-size:10px;font-weight:700;padding:2px 10px;border-radius:50px;letter-spacing:.5px;margin-bottom:.5rem;display:block;text-align:center}
+.price-th-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:.3rem}
+.price-th-amount{font-size:1.5rem;font-weight:700;color:var(--text);line-height:1.1}
+.price-th-amount small{font-size:12px;font-weight:400;color:var(--text-muted)}
+.price-th-sub{font-size:12px;color:var(--text-muted);margin-top:.2rem}
+.tbl-check{color:var(--jade);font-weight:700;font-size:15px}
+.tbl-dash{color:var(--text-muted);opacity:.35;font-size:15px}
+.tbl-dim{color:var(--text-muted);font-size:13px}
+.tbl-pro{color:var(--teal);font-weight:600;font-size:13px}
+.price-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:760px;margin:0 auto 2rem}
+.price-cta-col{background:var(--bg-card);border-radius:var(--radius);padding:1.25rem 1.5rem;border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:.5rem}
+.price-cta-col.pro{border-color:var(--coral)}
+.price-cta-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted)}
+.price-cta-col .store-btn{width:100%;justify-content:center}
+@media(max-width:640px){.price-cta-row{grid-template-columns:1fr}}
 .price-anchor{background:var(--bg-card);border-radius:var(--radius);padding:1.5rem 2rem;text-align:center;max-width:720px;margin:0 auto 2rem;border:1px solid rgba(255,255,255,.06)}.price-anchor p{font-size:15px;color:var(--text-muted)}.price-anchor strong{color:var(--text)}
 @media(max-width:640px){.pricing-grid{grid-template-columns:1fr}}
 .founder-grid{display:grid;grid-template-columns:1fr auto;gap:clamp(2rem,5vw,4rem);align-items:center;max-width:800px;margin:0 auto}
 .founder-text h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1.25rem;line-height:1.25}
 .founder-text p{color:var(--text-muted);font-size:1rem;line-height:1.75}
+.founder-data-note{font-size:13px;color:var(--text-muted);opacity:.7;margin-top:.75rem!important}
 .founder-photo{width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid var(--bg-card);flex-shrink:0}.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
 @media(max-width:640px){.founder-grid{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto;order:-1}}
 .faq-list{max-width:680px;margin:0 auto}.faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
@@ -98,11 +143,6 @@ section{padding:var(--section-py) 0}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}.faq-item.open .faq-a{max-height:300px;padding-bottom:1.25rem}.faq-a p{color:var(--text-muted);font-size:15px;line-height:1.7}
 .final-cta{text-align:center;background:linear-gradient(135deg,rgba(232,132,92,.08) 0%,rgba(60,192,184,.06) 100%);border-radius:var(--radius);padding:clamp(3rem,6vw,5rem) clamp(1.5rem,4vw,3rem);max-width:var(--max-w);margin:0 auto}
 .final-cta h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;margin-bottom:1.5rem;letter-spacing:-.3px}.final-cta .hero-micro{margin-top:1rem}
-.waitlist-form{display:flex;gap:8px;max-width:420px;margin:0 auto}
-.waitlist-input{flex:1;padding:14px 18px;border:1.5px solid rgba(255,255,255,.15);border-radius:var(--radius-sm);background:var(--bg-card);color:var(--text);font-size:15px;font-family:var(--font);outline:none;transition:border-color .2s}.waitlist-input:focus{border-color:var(--teal)}.waitlist-input::placeholder{color:var(--text-muted)}
-.waitlist-btn{padding:14px 28px;background:var(--coral);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:600;font-family:var(--font);cursor:pointer;transition:background .2s;white-space:nowrap}.waitlist-btn:hover{background:var(--coral-hover)}
-.waitlist-success{display:none;color:var(--jade);font-size:15px;font-weight:500;margin-top:1rem}
-@media(max-width:480px){.waitlist-form{flex-direction:column}}
 .footer{padding:3rem 0;border-top:1px solid rgba(255,255,255,.06);margin-top:var(--section-py)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-logo{font-size:18px;font-weight:700;letter-spacing:1px;color:var(--text)}.footer-logo span{color:var(--teal)}
@@ -114,16 +154,26 @@ section{padding:var(--section-py) 0}
 </head>
 <body>
 
-<nav class="nav" role="navigation" aria-label="Hauptnavigation"><div class="nav-inner"><a href="#" class="nav-logo" aria-label="PHYSIQ Home">PHYSI<span>Q</span></a><div class="nav-links"><a href="#features">Features</a><a href="#preise">Preise</a><a href="#ueber">Über</a><a href="#notify" class="nav-cta">Auf die Warteliste</a></div></div></nav>
+<nav class="nav" role="navigation" aria-label="Hauptnavigation"><div class="nav-inner"><a href="#" class="nav-logo" aria-label="PHYSIQ Home">PHYSI<span>Q</span></a><div class="nav-links"><a href="#download" class="nav-cta">Kostenlos starten</a></div></div></nav>
 
 <!-- HERO with Before/After Slider -->
 <section class="hero" id="home"><div class="wrap"><div class="hero-grid">
 <div class="hero-text fade-up">
-  <div class="hero-badge">Bald verfügbar für iOS &amp; Android</div>
+  <div class="hero-badge">Jetzt im App Store &amp; Google Play</div>
   <h1>Sieh, was sich wirklich verändert&nbsp;hat.</h1>
-  <p class="hero-sub">Statt nur einer Zahl auf der Waage.</p>
-  <div class="hero-buttons"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
-  <p class="hero-micro">Keine Pflicht-Fotos. Kostenloser Start.</p>
+  <p class="hero-sub">Körperzusammensetzung sichtbar machen — mit Studio-Fotos, KI-Körperanalyse und Gesundheitswerten statt nur einer Zahl auf der Waage.</p>
+  <p class="hero-glp1">Auch für GLP-1-Anwender: Sieh, wie sich dein Körper wirklich verändert — nicht nur die Zahl auf der Waage.</p>
+  <div class="hero-buttons">
+    <a href="APPSTORE_LINK" class="store-btn store-btn-apple" aria-label="Im App Store laden">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      App Store
+    </a>
+    <a href="PLAYSTORE_LINK" class="store-btn store-btn-google" aria-label="Bei Google Play laden">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg>
+      Google Play
+    </a>
+  </div>
+  <p class="hero-trust"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> EU-Server (Frankfurt) · DSGVO-konform · Fotos bleiben auf deinem Gerät</p>
 </div>
 <div class="fade-up" style="transition-delay:.15s">
   <div class="hero-compare" id="heroCompare">
@@ -138,6 +188,13 @@ section{padding:var(--section-py) 0}
 </div>
 </div></div></section>
 
+<!-- TRUST BAR -->
+<div class="trust-bar"><div class="wrap"><div class="trust-bar-inner">
+  <span class="trust-bar-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Server in Frankfurt</span>
+  <span class="trust-bar-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 2 2 4-4"/></svg> DSGVO-konform</span>
+  <span class="trust-bar-item"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Ende-zu-Ende-Verschlüsselung</span>
+</div></div></div>
+
 <!-- PAIN POINTS -->
 <section id="problem"><div class="wrap">
   <h2 class="section-headline fade-up">Die Waage zeigt eine Zahl.<br>Dein Körper erzählt eine andere Geschichte.</h2>
@@ -150,58 +207,71 @@ section{padding:var(--section-py) 0}
 
 <section class="bridge"><div class="wrap"><p class="fade-up">PHYSIQ macht sichtbar, was sich wirklich verändert.</p></div></section>
 
-<!-- DASHBOARD OVERVIEW -->
+<!-- STUDIO MODE — #1 Conversion-Treiber -->
 <section id="features"><div class="wrap"><div class="feature-grid">
-  <div class="feature-text fade-up">
-    <span class="feature-pill pill-teal">Dashboard</span>
-    <h2>Dein Fortschritt. Auf einen Blick.</h2>
-    <p>Gewicht, Umfänge, Streaks und persönliche Bestleistungen — alles an einem Ort. PHYSIQ zeigt dir nicht nur wo du stehst, sondern wie weit du schon gekommen bist.</p>
-    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
-  </div>
-  <div class="fade-up" style="transition-delay:.15s">
-    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-hero.webp" alt="PHYSIQ Dashboard — Messwerte, Streak und Bestleistung" loading="lazy"></div></div>
-  </div>
-</div></div></section>
-
-<!-- STUDIO MODE with studio photo -->
-<section><div class="wrap"><div class="feature-grid reverse">
   <div class="feature-text fade-up">
     <span class="feature-pill pill-teal">Studio Mode</span>
     <h2>Dein Fotostudio zu&nbsp;Hause.</h2>
     <p>Verwandle deine Smartphone-Fotos in professionelle Fortschrittsbilder. Gleiche Pose, gleicher Look — jedes Mal. So siehst du Veränderungen, die im Alltags-Selfie untergehen.</p>
-    <p class="feature-note"><svg width="16" height="16" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Fotos sind optional — PHYSIQ funktioniert auch ohne.</p>
+    <p class="foto-optional-hint"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg> Fotos sind optional — PHYSIQ funktioniert auch nur mit Messwerten.</p>
     <p class="feature-glp1">Besonders wertvoll für alle, die unter Medikation oder nach einem Programm ihren Körper im Blick behalten wollen.</p>
-    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+    <div class="feature-cta">
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
   </div>
   <div class="fade-up" style="transition-delay:.15s">
     <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="hero-after.webp" alt="PHYSIQ Studio Mode — professionelles Foto mit Studio-Effekt" loading="lazy"></div></div>
   </div>
 </div></div></section>
 
-<!-- KI-ANALYSE -->
-<section><div class="wrap"><div class="feature-grid">
+<!-- DASHBOARD OVERVIEW -->
+<section><div class="wrap"><div class="feature-grid reverse">
   <div class="feature-text fade-up">
-    <span class="feature-pill pill-teal">KI-Analyse</span>
-    <h2>Dein persönlicher Analyst.</h2>
-    <p>PHYSIQ analysiert deine Daten, erkennt Trends und gibt dir persönliche Einschätzungen — verständlich, motivierend und auf dich zugeschnitten. Kein Fachchinesisch. Keine generischen Tipps.</p>
-    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+    <span class="feature-pill pill-teal">Dashboard</span>
+    <h2>Dein Fortschritt. Auf einen Blick.</h2>
+    <p>Gewicht, Umfänge, Streaks und persönliche Bestleistungen — alles an einem Ort. PHYSIQ zeigt dir nicht nur wo du stehst, sondern wie weit du schon gekommen bist.</p>
+    <div class="feature-cta">
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
   </div>
   <div class="fade-up" style="transition-delay:.15s">
-    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-ki.webp" alt="PHYSIQ KI-Analyse — persönliche Körperanalyse" loading="lazy"></div></div>
+    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="compare-screenshot.jpeg" alt="PHYSIQ Vergleichsansicht: -2.7 kg Gewicht, -4.0 cm Taille in 6 Wochen" loading="lazy"></div></div>
   </div>
 </div></div></section>
 
 <!-- HEALTH SCORE -->
-<section><div class="wrap"><div class="feature-grid reverse">
+<section><div class="wrap"><div class="feature-grid">
   <div class="feature-text fade-up">
     <span class="feature-pill pill-teal">Health Score</span>
     <h2>Mehr als nur Gewicht.</h2>
     <p>Wie gesund dein Gewicht wirklich ist, sagt dir keine Waage. PHYSIQ berechnet aus deinen Maßen einen persönlichen Gesundheitswert — und zeigt dir, wie er sich über die Zeit entwickelt.</p>
-    <p class="feature-glp1">Ideal, um Veränderungen der Körperzusammensetzung sichtbar zu machen — nicht nur Kilogramm.</p>
-    <div class="feature-cta"><a href="#notify" class="btn-coral">Auf die Warteliste</a></div>
+    <p class="feature-glp1">Ideal für alle, die Körperzusammensetzung statt nur Gewicht tracken wollen — auch während einer GLP-1-Therapie.</p>
+    <p class="social-proof-note"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Basierend auf dem WHO-Richtwert WHtR &lt; 0.5</p>
+    <div class="feature-cta">
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
   </div>
   <div class="fade-up" style="transition-delay:.15s">
     <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-health.webp" alt="PHYSIQ Health Score — Verlaufschart und WHtR" loading="lazy"></div></div>
+  </div>
+</div></div></section>
+
+<!-- KI-ANALYSE -->
+<section><div class="wrap"><div class="feature-grid reverse">
+  <div class="feature-text fade-up">
+    <span class="feature-pill pill-teal">KI-Analyse</span>
+    <h2>Dein persönlicher Analyst.</h2>
+    <p>PHYSIQ analysiert deine Daten, erkennt Trends und gibt dir persönliche Einschätzungen — verständlich, motivierend und auf dich zugeschnitten. Kein Fachchinesisch. Keine generischen Tipps.</p>
+    <div class="feature-cta">
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
+  </div>
+  <div class="fade-up" style="transition-delay:.15s">
+    <div class="phone"><div class="phone-notch"></div><div class="phone-screen"><img src="screenshot-ki.webp" alt="PHYSIQ KI-Analyse — persönliche Körperanalyse" loading="lazy"></div></div>
   </div>
 </div></div></section>
 
@@ -215,28 +285,69 @@ section{padding:var(--section-py) 0}
   </div>
 </div></section>
 
+<!-- GRÜNDER -->
+<section id="ueber"><div class="wrap"><div class="founder-grid fade-up">
+  <div class="founder-text"><h2>Gebaut von jemandem, der es selbst braucht.</h2><p>Ich bin Andi. Kein Fitness-Influencer, kein Startup-Gründer mit Millionenbudget. Ich habe angefangen, meinen Körper zu tracken — und gemerkt: keine App zeigt mir, was sich wirklich verändert. Also habe ich PHYSIQ gebaut. Erst für mich. Jetzt für alle, denen es genauso geht.</p><p class="founder-data-note">Deine Daten gehören dir — jederzeit als CSV exportierbar.</p></div>
+  <div class="founder-photo"><img src="founder-photo.webp" alt="Andi, Gründer von PHYSIQ" width="140" height="140" loading="lazy"></div>
+</div></div></section>
+
 <!-- PRICING -->
 <section id="preise"><div class="wrap">
   <h2 class="section-headline fade-up">Starte kostenlos.<br>Upgrade wenn du bereit bist.</h2><div style="height:1.5rem"></div>
   <div class="price-anchor fade-up"><p>Personal Trainer: <strong>~80€/Monat.</strong> Bodyscan-Studio: <strong>~30€ pro Sitzung.</strong> PHYSIQ Pro: <strong>9,99€.</strong></p></div>
-  <div class="pricing-grid">
-    <div class="price-card fade-up"><div class="price-name">Basis</div><div class="price-amount">Free</div><div class="price-period">Für immer kostenlos</div><ul class="price-features"><li>Unbegrenzte Einträge</li><li>Studio Mode</li><li>Cloud-Sync</li><li>1 KI-Analyse / Monat</li></ul><a href="#notify" class="btn-outline">Kostenlos starten</a></div>
-    <div class="price-card featured fade-up" style="transition-delay:.1s"><span class="price-badge">Beliebt</span><div class="price-name">Pro</div><div class="price-amount">9,99€ <span>/Mo</span></div><div class="price-period">Alles aus Basis, plus:</div><ul class="price-features"><li>Unbegrenzte KI-Analysen</li><li>Detaillierte Trend-Berichte</li><li>Prioritäts-Support</li></ul><a href="#notify" class="btn-coral">Pro ausprobieren</a></div>
+  <div class="price-table-wrap fade-up">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            <div class="price-th-name">Basis</div>
+            <div class="price-th-amount">Free</div>
+            <div class="price-th-sub">Für immer kostenlos</div>
+          </th>
+          <th>
+            <span class="price-th-badge">EMPFOHLEN</span>
+            <div class="price-th-name">Pro</div>
+            <div class="price-th-amount">9,99€ <small>/Mo</small></div>
+            <div class="price-th-sub">oder 7,99€/Mo im Jahresabo</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Unbegrenzte Einträge</td><td><span class="tbl-check">✓</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Studio Mode Fotos</td><td><span class="tbl-check">✓</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Cloud-Sync</td><td><span class="tbl-check">✓</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Performance Score (WHtR)</td><td><span class="tbl-check">✓</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>KI-Analysen</td><td><span class="tbl-dim">1 / Monat</span></td><td><span class="tbl-pro">Unbegrenzt</span></td></tr>
+        <tr><td>KI-Coaches (Scope, Drive, Crew)</td><td><span class="tbl-dash">—</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Vorher/Nachher-Vergleich mit KI</td><td><span class="tbl-dash">—</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Foto-Overlay &amp; Pose-Alignment</td><td><span class="tbl-dash">—</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Erweiterte Trend-Analyse</td><td><span class="tbl-dash">—</span></td><td><span class="tbl-check">✓</span></td></tr>
+        <tr><td>Prioritäts-Support</td><td><span class="tbl-dash">—</span></td><td><span class="tbl-check">✓</span></td></tr>
+      </tbody>
+    </table>
   </div>
-  <p class="price-yearly fade-up">Jahresabo: 95,88€/Jahr (7,99€/Mo) — mit exklusiven Jahres-Features: 12-Monats-Trend-Analyse und persönliche Jahres-Zusammenfassung.</p>
+  <div class="price-cta-row fade-up">
+    <div class="price-cta-col">
+      <div class="price-cta-label">Basis — Free</div>
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
+    <div class="price-cta-col pro">
+      <div class="price-cta-label">Pro — 9,99€/Mo</div>
+      <a href="APPSTORE_LINK" class="store-btn store-btn-apple store-btn-sm" aria-label="Im App Store laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> App Store</a>
+      <a href="PLAYSTORE_LINK" class="store-btn store-btn-google store-btn-sm" aria-label="Bei Google Play laden"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg> Google Play</a>
+    </div>
+  </div>
+  <p class="price-yearly fade-up">Jahresabo: 7,99€/Mo — spare 20%. Inklusive 12-Monats-Trend-Analyse und persönlicher Jahres-Zusammenfassung.</p>
 </div></section>
-
-<!-- GRÜNDER -->
-<section id="ueber"><div class="wrap"><div class="founder-grid fade-up">
-  <div class="founder-text"><h2>Gebaut von jemandem, der es selbst braucht.</h2><p>Ich bin Andi. Kein Fitness-Influencer, kein Startup-Gründer mit Millionenbudget. Ich habe angefangen, meinen Körper zu tracken — und gemerkt: keine App zeigt mir, was sich wirklich verändert. Also habe ich PHYSIQ gebaut. Erst für mich. Jetzt für alle, denen es genauso geht.</p></div>
-  <div class="founder-photo"><img src="founder-photo.webp" alt="Andi, Gründer von PHYSIQ" width="140" height="140" loading="lazy"></div>
-</div></div></section>
 
 <!-- FAQ -->
 <section><div class="wrap">
   <h2 class="section-headline fade-up">Häufige Fragen</h2><div style="height:1.5rem"></div>
   <div class="faq-list fade-up">
     <div class="faq-item"><button class="faq-q">Brauche ich Fotos, um PHYSIQ zu nutzen?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Nein. Fotos sind komplett optional. PHYSIQ trackt auch Messwerte, berechnet deinen Gesundheitswert und gibt dir KI-Analysen — alles ohne ein einziges Foto. Studio Mode ist ein Bonus für alle, die ihren Fortschritt visuell festhalten wollen.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Ist PHYSIQ für GLP-1-Nutzer geeignet?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Ja. PHYSIQ zeigt dir, wie sich dein Körper unter der Therapie wirklich verändert — nicht nur das Gewicht auf der Waage. Körperzusammensetzung, Umfänge und Gesundheitswerte machen sichtbar, was Kilogramm allein nicht erzählen.</p></div></div>
     <div class="faq-item"><button class="faq-q">Wie genau ist der Health Score?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Der Health Score basiert auf wissenschaftlich fundierten Maßen wie dem Taille-Größe-Verhältnis — ein Indikator, den Mediziner als aussagekräftiger als BMI bewerten. Er ersetzt keine ärztliche Diagnose, gibt dir aber eine solide Orientierung.</p></div></div>
     <div class="faq-item"><button class="faq-q">Was passiert mit meinen Daten?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Deine Daten liegen auf Servern in Frankfurt (DSGVO-konform). Fotos bleiben auf deinem Gerät, es sei denn du aktivierst Cloud-Sync. PHYSIQ verkauft keine Daten und zeigt keine Werbung — dein Vertrauen ist unser Geschäftsmodell.</p></div></div>
     <div class="faq-item"><button class="faq-q">Was passiert wenn ich kündige?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg></button><div class="faq-a"><p>Du behältst den Zugang zu allen Basis-Features und deinen gespeicherten Daten. Nur die Pro-Features (unbegrenzte KI-Analysen, Trend-Berichte) werden deaktiviert. Deine Daten gehören dir — immer.</p></div></div>
@@ -244,17 +355,26 @@ section{padding:var(--section-py) 0}
   </div>
 </div></section>
 
-<!-- FINAL CTA -->
-<section id="notify"><div class="final-cta fade-up">
+<!-- DOWNLOAD CTA -->
+<section id="download"><div class="final-cta fade-up">
   <h2>Bereit, deinen Fortschritt wirklich zu sehen?</h2>
-  <div class="waitlist-form" id="waitlistForm"><input type="email" class="waitlist-input" placeholder="Deine E-Mail-Adresse" id="waitlistEmail" required><button class="waitlist-btn" onclick="submitWaitlist()">Benachrichtige mich</button></div>
-  <div class="waitlist-success" id="waitlistSuccess">Du bist auf der Liste! Wir melden uns, sobald PHYSIQ live ist.</div>
-  <p class="hero-micro">Keine Kreditkarte. Keine Pflicht-Fotos.</p>
+  <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem;max-width:480px;margin-left:auto;margin-right:auto;">Kostenlos starten. Keine Kreditkarte. Kein Abo nötig.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="APPSTORE_LINK" class="store-btn store-btn-apple">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Im App Store laden
+    </a>
+    <a href="PLAYSTORE_LINK" class="store-btn store-btn-google">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.4-7.16-2.68-2.68-10.71 9.7zm-1.68-20.3C1.2 3.83 1 4.27 1 4.81v14.38c0 .54.2.98.5 1.35l.07.07 8.06-8.06v-.19L1.5 3.39l-.0.07zm18.63 8.92l-2.38-1.38-2.96 2.96 2.96 2.96 2.4-1.38c.68-.4.68-1.76-.02-2.16zm-17.45 9.8l10.71-9.69L10.71 9.8.73 19.5c.37.43.89.67 1.95.68z"/></svg>
+      Google Play
+    </a>
+  </div>
+  <p class="hero-micro" style="margin-top:1.5rem;">DSGVO-konform · Server in Frankfurt · Keine Werbung</p>
 </div></section>
 
 <footer class="footer"><div class="wrap"><div class="footer-inner">
   <div class="footer-logo">PHYSI<span>Q</span></div>
-  <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">Kontakt</a></div>
+  <div class="footer-links"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="mailto:contact@physiq.studio">Kontakt</a></div>
   <p class="footer-copy">&copy; 2026 PHYSIQ</p>
 </div></div></footer>
 
@@ -262,7 +382,7 @@ section{padding:var(--section-py) 0}
 (function(){var els=document.querySelectorAll('.fade-up');if(!window.IntersectionObserver){els.forEach(function(e){e.classList.add('visible')});return}var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
 (function(){var w=document.getElementById('heroCompare');if(!w)return;var l=document.getElementById('compareLine'),h=document.getElementById('compareHandle'),a=document.getElementById('afterImg'),d=false;function s(p){p=Math.max(5,Math.min(95,p));a.style.clipPath='inset(0 0 0 '+p+'%)';l.style.left=p+'%';h.style.left=p+'%'}function g(e){var r=w.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;return(x/r.width)*100}w.addEventListener('mousedown',function(e){d=true;s(g(e));e.preventDefault()});w.addEventListener('touchstart',function(e){d=true;s(g(e))},{passive:true});document.addEventListener('mousemove',function(e){if(d)s(g(e))});document.addEventListener('touchmove',function(e){if(d)s(g(e))},{passive:true});document.addEventListener('mouseup',function(){d=false});document.addEventListener('touchend',function(){d=false})})();
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=this.parentElement;var o=i.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')})});
-function submitWaitlist(){var e=document.getElementById('waitlistEmail').value;if(!e||!e.includes('@'))return;document.getElementById('waitlistForm').style.display='none';document.getElementById('waitlistSuccess').style.display='block'}
+
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
