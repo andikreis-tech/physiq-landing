@@ -260,5 +260,6 @@ section{padding:var(--section-py) 0}
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=this.parentElement;var o=i.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')})});
 function submitWaitlist(){var e=document.getElementById('waitlistEmail').value;if(!e||!e.includes('@'))return;document.getElementById('waitlistForm').style.display='none';document.getElementById('waitlistSuccess').style.display='block'}
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
